@@ -3,30 +3,25 @@
     padding   : 0;
     box-sizing: border-box;
 }
-
 :root {
     --background-color  : hsl(106, 0%, 12%);
     --card-color        : hsl(106, 0%, 18%);
     --principal-color   : hsl(35, 100%, 35%);
     --secondary-color   : hsl(217, 100%, 97%);
-    --primary-fontsize  : 1.8rem;
-    --secondary-fontsize: 1.2rem;
 }
-
 html {
     min-height: 100vh;
     scroll-behavior: smooth;
 }
-
 body {
-    min-height: 100%;
+    min-height      : 100%;
     background-color: var(--background-color);
+    overflow-y      : hidden;
 }
-
 .header {
-    width: 100%;
+    width  : 100%;
+    z-index: 99;
 }
-
 .header__btn {
     display: none;
 }
@@ -34,45 +29,39 @@ body {
     cursor: pointer;
     color: var(--secondary-color);
 }
-
 .menu {
-    position: fixed;
-    display: flex;
+    position       : fixed;
+    z-index        : 89;
+    display        : flex;
     justify-content: space-around;
-    top: 0;
-    width: 100%;
-    padding: 0.4em;
+    top            : 0;
+    width          : 100%;
+    padding        : 0.4em;
 }
-
 .menu__list {
     display        : flex;
     margin-left    : 5em;
     justify-content: space-around;
     width          : 50%;
 }
-
 .menu__link {
-    color: var(--secondary-color);
-    font-family: 'Rubik', sans-serif;
+    color          : var(--secondary-color);
+    font-family    : 'Rubik', sans-serif;
     text-decoration: none;
+    cursor         : pointer;
 }
-
 .menu__item,
 .menu__item--logo {
     list-style: none;
     border-radius: 15px;
     padding: 0.4em;
 }
-
 .menu__item:hover {
     background-color: var(--card-color);
 }
-
 .main {
     margin-top: 50px;
-    /* border    : 1px solid red; */
 }
-
 .banner {
     background-color: var(--card-color);
     width           : 90%;
@@ -87,7 +76,6 @@ body {
     margin-left     : auto;
     margin-right    : auto;
 }
-
 .banner__profile {
     display      : block;
     width        : 150px;
@@ -96,7 +84,6 @@ body {
     margin-bottom: 15px;
     border       : 5px solid var(--principal-color);
 }
-
 .banner__text {
     color       : var(--principal-color);
     display     : block;
@@ -111,7 +98,6 @@ body {
         blink .5s infinite step-end alternate;
     overflow: hidden;
 }
-
 .banner__description {
     color      : var(--secondary-color);
     width      : 85%;
@@ -120,13 +106,11 @@ body {
     font-size  : 1.2rem;
     line-height: 28px;
 }
-
 .banner__title {
     font-family: 'Rubik', sans-serif;
     font-size  : 1.5rem;
     color      : var(--secondary-color);
 }
-
 .project {
     display         : flex;
     flex-wrap       : wrap;
@@ -150,22 +134,16 @@ body {
     font-style     : oblique;
     margin         : 1.1em;
 }
-/* .cards {
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: space-around;
-    border         : 1px solid red; 
-} */
 .card {
     width           : 45%;
     min-width       : 260px;
-    height          : auto;
+    min-height      : 480px;
+    max-height      : 630px;
     border-radius   : 15px;
     margin          : 20px 0;
     background-color: var(--secondary-color);
 }
 .card__header {
-    /* width       : 90%; */
     margin-right: auto;
     margin-left : auto;
     
@@ -174,7 +152,6 @@ body {
     border-radius: 15px 15px 0 0;
     width     : 100%;
     height    : auto;
-    /* object-fit: contain; */
 }
 .card__description {
     color      : var(--background-color);
@@ -183,14 +160,12 @@ body {
     padding    : 1em 0.8em;
 }
 .card__footer {
-    /* border         : 1px solid red; */
     margin-left    : auto;
     margin-right   : auto;
     display        : flex;
     justify-content: space-evenly;
     width          : 100%;
-    padding-bottom : 1em;
-    
+    margin         : 1em 0;
 }
 .card__demo,
 .card__code {
@@ -208,19 +183,91 @@ body {
     background-color: var(--secondary-color);
     color           : var(--principal-color);
 }
-.card__zoom {
-    width       : min-content;
-    margin-left : auto;
-    margin-right: auto;
-    font-family : 'Rubik', sans-serif;
-    /* border      : 1px solid red; */
+.skills {
+    width                : 90%;
+    height               : min-content;
+    padding-top          : 2em;
+    padding-bottom       : 2em;
+    margin-left          : auto;
+    margin-right         : auto;
+    border-radius        : 10px;
+    background-color     : var(--card-color);
 }
-.card__zoomicon {
-    cursor: pointer;
+.skills__block {
+    color                : var(--secondary-color);
+    width                : 80%;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin               : 0 auto;
+    font-family          : 'Rubik', sans-serif;
 }
-.card__zoomicon:hover {
-    color: var(--principal-color);
+.skill {
+    margin      : 2em 2em;
+    justify-self: start;
 }
+.skills__title {
+    margin-bottom : 10px;
+    padding-bottom: 3px;
+    border-bottom : 2px solid var(--principal-color);
+}
+.skills__item {
+    margin-bottom: 2px;
+}
+.contact {
+    display         : flex;
+    justify-content : space-around;
+    align-items     : center;
+    flex-wrap       : wrap;
+    width           : 90%;
+    height          : min-content;
+    padding-top     : 2em;
+    padding-bottom  : 2em;
+    margin-left     : auto;
+    margin-right    : auto;
+    border-radius   : 10px;
+    background-color: var(--card-color);
+    gap             : 25px;
+}
+.contact__icon {
+    font-size   : 20rem;
+    color       : var(--background-color);
+    max-width       : 40%;
+}
+.contact__iconblock {
+    height: min-content;
+}
+.contact__social {
+    width : 40%;
+    height: min-content;
+}
+.contact__link {
+    text-decoration: none;
+    color          : var(--secondary-color);
+    font-family    : 'Rubik', sans-serif;
+    font-size      : 1.2rem;
+}
+.contact__paragraph {
+    margin-bottom: 1.5em;
+}
+.contact__iconlink {
+    font-size: 1.5rem;
+    margin   : 0.5em;
+    color    : var(--principal-color);
+}
+.footer {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+    font-family     : 'Rubik', sans-serif;
+    font-weight     : bold;
+    font-size       : 1.5rem;
+    color           : var(--card-color);
+    background-color: var(--principal-color);
+    margin-top      : 90px;
+    height          : 300px;
+}
+
 
 .hide {
     opacity: 0;
@@ -243,7 +290,7 @@ body {
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 690px) {
     .banner__text {
         font-size: 1rem;
     }
@@ -252,6 +299,23 @@ body {
     }
     .card__description {
         font-size: 1rem;
+    }
+    .card {
+        position: relative;
+    }
+    .card__footer {
+        position: absolute;
+        bottom  : 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact__icon {
+        font-size: 15em;
+    }
+    .contact__link {
+        font-size: 1rem;
+
     }
 }
 
@@ -270,16 +334,20 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        position        : fixed;
+        top             : 0;
+        background-color: var(--background-color);
+    }
     .header__btn {
         display        : flex;
         justify-content: end;
         width          : 90%;
-        padding        : 0.8em;
+        padding        : 0.5em;
     }
     .main {
-        margin-top: 0;
+        margin-top: 50px;
     }
-
     .menu {
         display   : block;
         position  : fixed;
@@ -290,21 +358,18 @@ body {
         height    : 100vh;
         width     : 248px;
         padding   : 30px;
-        opacity   : .5;
+        opacity   : .8;
         transform : translateX(-400px);
         transition: transform .5s ease-in-out;
     }
-
     .menu.show {
         transform: translateX(-20px);
     }
-
     .menu__list {
         display: flex;
         flex-direction: column;
         margin-left: 0;
     }
-
     .menu__item,
     .menu__item--logo {
         list-style   : none;
@@ -312,9 +377,7 @@ body {
         padding      : 0.4em;
         margin       : 10px 0;
     }
-
     .menu__item:hover {
         background-color: var(--card-color);
     }
-
 }

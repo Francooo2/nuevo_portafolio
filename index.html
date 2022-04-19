@@ -11,7 +11,7 @@
     <title>FrancoDev</title>
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <nav class="menu hide" id="principalnav">
             <div class="menu__logo">
@@ -20,16 +20,16 @@
                 </a>
             </div>
             <ul class="menu__list">
-                <a class="menu__link" href="">
+                <a class="menu__link" id="home">
                     <li class="menu__item">Incicio</li>
                 </a>
                 <a class="menu__link" href="#project">
                     <li class="menu__item">Proyectos</li>
                 </a>
-                <a class="menu__link" href="">
+                <a class="menu__link" href="#skills">
                     <li class="menu__item">Tecnologias</li>
                 </a>
-                <a class="menu__link" href="">
+                <a class="menu__link" href="#contact">
                     <li class="menu__item">Contacto</li>
                 </a>
             </ul>
@@ -51,49 +51,79 @@
         <article class="separator hide" id="separator">
             <p>{ ... }</p>
         </article>
-
-        <!-- <div class="card__zoom">
-            <i class="fas fa-search card__zoomicon"></i>
-        </div> -->
-
         <section class="project" id="project">
-            <!-- <article class="card">
-                <div class="card__header">
-                    <img class="card__img" src="assets/img/todolist.png" alt="Imágen descriptiva">
-                </div>
-                <p class="card__description">Aplicación de tareas, con inicio de sesión, y registro de usuarios en
-                    Node.js, a modo de práctica. Se utilizaron tecnologias tales como: HTML, CSS, JavaScript, MySQL,
-                    Node.js, JWT y DigitalOcean.</p>
-                <div class="card__footer">
-                    <a href="https://www.meorganizo.digital/" target="_blank" class="card__demo">Demo</a>
-                    <a href="https://github.com/Francooo2/meOrganizoApp" target="_blank" class="card__code">Código</a>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card__header">
-                    <img class="card__img" src="assets/img/todolist.png" alt="Imágen descriptiva">
-                </div>
-                <p class="card__description">Aplicación de tareas, con inicio de sesión, y registro de usuarios en
-                    Node.js, a modo de práctica. Se utilizaron tecnologias tales como: HTML, CSS, JavaScript, MySQL,
-                    Node.js, JWT y DigitalOcean.</p>
-                <div class="card__footer">
-                    <a href="https://www.meorganizo.digital/" target="_blank" class="card__demo">Demo</a>
-                    <a href="https://github.com/Francooo2/meOrganizoApp" target="_blank" class="card__code">Código</a>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card__header">
-                    <img class="card__img" src="assets/img/todolist.png" alt="Imágen descriptiva">
-                </div>
-                <p class="card__description">Aplicación de tareas, con inicio de sesión, y registro de usuarios en
-                    Node.js, a modo de práctica. Se utilizaron tecnologias tales como: HTML, CSS, JavaScript, MySQL,
-                    Node.js, JWT y DigitalOcean.</p>
-                <div class="card__footer">
-                    <a href="https://www.meorganizo.digital/" target="_blank" class="card__demo">Demo</a>
-                    <a href="https://github.com/Francooo2/meOrganizoApp" target="_blank" class="card__code">Código</a>
-                </div>
-            </article> -->
         </section>
+        <article class="separator" id="separator">
+            <p>{ ... }</p>
+        </article>
+        <section class="skills" id="skills">
+            <div class="skills__block">
+                <article class="skill">
+                    <h2 class="skills__title">FrontEnd</h2>
+                <ul>
+                    <li class="skills__item">HTML</li>
+                    <li class="skills__item">CSS</li>
+                    <li class="skills__item">JavaScript</li>
+                    <li class="skills__item">React</li>
+                </ul>
+            </article>
+            <article class="skill">
+                <h2 class="skills__title">BackEnd</h2>
+                <ul>
+                    <li class="skills__item">Node.js</li>
+                    <li class="skills__item">Express</li>
+                    <li class="skills__item">Socket.io</li>
+                    <li class="skills__item">JWT</li>
+                </ul>
+            </article>
+            <article class="skill">
+                <h2 class="skills__title">Bases de Datos</h2>
+                <ul>
+                    <li class="skills__item">MySQL</li>
+                    <li class="skills__item">PostgreSQL</li>
+                    <li class="skills__item">Mongo DB</li>
+                </ul>
+            </article>
+            <article class="skill">
+                <h2 class="skills__title">Versionamiento</h2>
+                <ul>
+                    <li class="skills__item">Git</li>
+                    <li class="skills__item">GitHub</li>
+                </ul>
+            </article>
+            <article class="skill">
+                <h2 class="skills__title">Nube</h2>
+                <ul>
+                    <li class="skills__item">DigitalOcean</li>
+                </ul>
+            </article>
+        </div>
+        </section>
+        <article class="separator" id="separator">
+            <p>{ ... }</p>
+        </article>
+        <section class="contact" id="contact">
+            <div class="contact__iconblock">
+                <i class="far fa-address-card contact__icon"></i>
+            </div>
+            <article class="contact__social">
+                <p class="contact__paragraph">
+                    <a class="contact__link" href="tel:+56967371267"><span class="contact__iconlink"><i class="fas fa-phone"></i></span>+56967371267</a>
+                </p>
+                <p class="contact__paragraph">
+                    <a class="contact__link" href="mailto:fpalmalopez2@gmail.com"><span class="contact__iconlink"><i class="fas fa-envelope"></i></span>fpalmalopez2@gmail.com</a>
+                </p>
+                <p class="contact__paragraph">
+                    <a class="contact__link" href="https://www.linkedin.com/in/francopalmalopez/" target="_blank"><span class="contact__iconlink"><i class="fab fa-linkedin"></i></span>Linkedin</a>
+                </p>
+                <p class="contact__paragraph">
+                    <a class="contact__link" href="https://github.com/Francooo2" target="_blank"><span class="contact__iconlink"><i class="fab fa-github-square"></i></span>GitHub</a>
+                </p>
+            </article>
+        </section>
+        <footer class="footer">
+            2022
+        </footer>
     </main>
 
 
