@@ -36,6 +36,15 @@ export const projects = [
         btnDemo    : false
     },
     {
+        image      : "viajes.png",
+        description: "Landing page de agencia de viajes a modo de práctica, utilizando Bootstrap",
+        demo       : "https://francooo2.github.io/landingpage_viajeschile/",
+        code       : "https://github.com/Francooo2/landingpage_viajeschile",
+        private    : false,
+        btnCode    : true,
+        btnDemo    : true
+    },
+    {
         image      : "suricata.png",
         description: "Maquetación de sitio web de compra de comidas, utilizando Bootstrap.",
         demo       : "https://francooo2.github.io/suricata_page/",
