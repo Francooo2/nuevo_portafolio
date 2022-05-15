@@ -1,12 +1,11 @@
 import { projects } from '../data.js'
 
-const profile = document.getElementById('job_profile')
-const nav = document.getElementById('principalnav')
-const menuBtn = document.getElementById('btn')
-const iconSeparator = document.getElementById('separator')
+const profile         = document.getElementById('job_profile')
+const nav             = document.getElementById('principalnav')
+const menuBtn         = document.getElementById('btn')
+const iconSeparator   = document.getElementById('separator')
 const sectionProjects = document.getElementById('project')
-const body = document.getElementById('body')
-const home            = document.getElementById('home')
+const body            = document.getElementById('body')
 
 setTimeout(() => {
   profile.classList.add('showcontent')
@@ -25,14 +24,6 @@ window.onscroll = () => {
 
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle('show')
-})
-
-home.addEventListener('click', () => {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
 })
 
 for (const project of projects) {
