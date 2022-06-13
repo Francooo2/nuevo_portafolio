@@ -290,6 +290,12 @@ body {
     }
 }
 
+@media (max-width: 950px) {
+    .card {
+        width: 80%;
+    }
+}
+
 @media (max-width: 690px) {
     .banner__text {
         font-size: 1rem;
